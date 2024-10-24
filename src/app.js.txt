@@ -1,0 +1,17 @@
+// Basic Node.js server
+const http = require('http');
+
+// Create an HTTP server
+const server = http.createServer((req, res) => {
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'text/plain');
+    res.end('Hello, GitHub! Welcome to my Node.js repository.\n');
+});
+
+// Define the port to listen on
+const PORT = 3000;
+
+// Start the server
+server.listen(PORT, () => {
+    console.log(`Server running at http://localhost:${PORT}/`);
+});
